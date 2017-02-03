@@ -1,5 +1,4 @@
 
-
 # 🚨This library is no longer maintained 🚨
 
 Please use ["react-navigation"](https://github.com/react-navigation/react-navigation), or [other alternatives](https://reactnavigation.org/docs/en/alternatives.html) instead.
