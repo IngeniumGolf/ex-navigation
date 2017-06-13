@@ -81,10 +81,10 @@ class ExNavigationReducer {
   }
 
   static [ActionTypes.REMOVE_NAVIGATOR](state, { navigatorUID }) {
-    const currentNavigatorUID =
-      (navigatorsToRestore.length &&
-        navigatorsToRestore[navigatorsToRestore.length - 1]) ||
-      state.navigators[navigatorUID].parentNavigatorUID;
+    // `navigatorsToRestore` is a dirty `let` from above
+    // here we remove the navigator we're about to remove
+    navigatorsToRestore = _.without(navigatorsToRestore, navigatorUID)
+    const currentNavigatorUID = (navigatorsToRestore.length && navigatorsToRestore[navigatorsToRestore.length - 1]) || state.navigators[navigatorUID].parentNavigatorUID;
     navigatorsToRestore.pop();
     return {
       ...state,

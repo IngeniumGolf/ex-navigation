@@ -1,7 +1,10 @@
 # ExNavigation
 
-A route-centric, batteries-included navigation library for Expo and
-React Native that works seamlessly on Android and iOS.
+## This is a temporary fork to fix the back button
+
+Back button doesn't work correctly in `ex-navigation` when using the sliding views. See issue for reference.
+
+https://github.com/exponent/ex-navigation/issues/400
 
 ## An important note about the future
 
