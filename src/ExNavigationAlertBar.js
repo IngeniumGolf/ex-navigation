@@ -15,6 +15,8 @@ import { decorate as reactMixin } from 'react-mixin';
 import TimerMixin from 'react-timer-mixin';
 import exNavConnect from './ExNavigationConnect';
 
+import isIPhoneX from './utils/isIPhoneX';
+
 type AlertState = {
   options: {
     container: Object | number,
@@ -219,7 +221,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   alertBarInnerContainer: {
-    paddingVertical: ALERT_TEXT_VERTICAL_MARGIN,
+    paddingVertical: isIPhoneX ? 28 : ALERT_TEXT_VERTICAL_MARGIN,
   },
   alertText: {
     marginHorizontal: ALERT_TEXT_HORIZONTAL_MARGIN,
